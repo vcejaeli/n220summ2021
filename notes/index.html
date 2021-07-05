@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Notes</title>
+</head>
+<body>
+    <div class="title"><h1>Video Notes</h1></div>
+    <section class="classNotes">
+        <section class="mod01">
+            <h2>module 01</h2>
+            <h3>Objects and Classes</h3>
+            <h4>https://www.youtube.com/watch?v=nymnx90T00Y</h4>
+
+            <p>objects describe a thing. have properties and methods</p>
+            <script>
+                var myDog = {
+                    name: "krog",
+                    height: 10,
+                    color: "brown"
+                }
+            </script>
+
+            <p>adding a method (a function inside an object)</p>
+            <script>
+                var myDog = {
+                    name: "krog",
+                    height: 10,
+                    color: "brown"
+                    age: 4,
+                    bark: function(){
+                        console.log("Oof oof");
+                    }
+
+                    eat: function(){
+                        console.log("munch");
+                    }
+                }
+            </script>
+
+            <p>using dot operator to access the method and invoke it</p>
+            <script>
+                myDog.bark();
+            </script>
+
+            <p>'this' keyword | inside object the 'this' refers to object that the method resides in, gives access to rest of methods and properties</p>
+            <script>
+                var myDog = {
+                    name: "krog",
+                    height: 10,
+                    color: "brown"
+                    age: 4,
+                    bark: function(){
+                        console.log(this.name + "Oof oof!");
+                    }
+                }
+            </script>
+            <p>The scope for krog is everything below | 'this' refers to anything inside of the scope</p>
+            <script>
+                            {
+                name: "krog",
+                height: 10,
+                color: "brown"
+                age: 4,
+                bark: function(){
+                    console.log(this.name + "Oof oof!");
+                }
+            }
+            </script>
+            
+            <p>A class is is an abstract representation of what an object would be. Not a visual representation but more so a template. (dog example) picture a dog, real dogs are much more unique  | idea of dog = class, actual dog = object</p>
+            <p>Dog Class</p>
+            <script>
+                //when creating class we uppercase, signals that this is not an object or instance but is a Higher lvl concept that will be turned into an instance or object.
+                class Dog {
+                    constructor(name,height,color) {
+                        this.name = name;
+                        this.height = height;
+                        this.color = color;
+                    }
+                }
+            </script>
+
+            <p>Instantiating a class | to make new object from template, you use the 'new' keyword. This runs the constructor</p>
+            <script>
+                class Dog {
+                    constructor(name,height,color) {
+                        this.name = name;
+                        this.height = height;
+                        this.color = color;
+                    }
+                }
+
+                var myDog = new Dog("Giselle",10,"yellow");
+            </script>
+
+            <p>how to add method to class?  you write the name of the method within the class scope</p>
+            <script>
+                class Dog {
+                    constructor(name,height,color) {
+                        this.name = name;
+                        this.height = height;
+                        this.color = color;
+                    }
+
+                    bark() {
+                        console.log(this.name + "barks!");
+                    }
+                }
+
+                var myDog = new Dog("Giselle",10,"yellow");
+            </script>
+
+            <p>Invoke a class method</p>
+            <script>
+                class Dog {
+                    constructor(name,height,color) {
+                        this.name = name;
+                        this.height = height;
+                        this.color = color;
+                    }
+
+                    bark() {
+                        console.log(this.name + "barks!");
+                    }
+                }
+
+                var myDog = new Dog("Giselle",10,"yellow");
+                myDog.bark();
+            </script>
+
+            <p>Class inheritance | classes can extend the capabilities of others through inheritance</p>
+            <script>
+                class Animal {
+                    constructor(name,weight,color) {
+                        this.name = name;
+                        this.weight = weight;
+                        this.color = color;
+                    }
+                }
+            </script>
+            <p>then, we Extend Animal | extends and super are keywords. EXTENDS 'take all capabilities of Animal and add these new features', SUPER 'invoke the constructor of the class that this is extending', Dog is now everything Animal is, plus the new things we added to Dog!</p>
+            <script>
+                class Dog extends Animal {
+                    constructor(name,weight,color) {
+                        super(name,weight,color);
+                        this.kind = "dog";
+                    }
+
+                    bark() {
+                        console.log(this.name + " barks!");
+                    }
+                }
+            </script>
+
+        </section>
+    </section>
+</body>
+</html>
