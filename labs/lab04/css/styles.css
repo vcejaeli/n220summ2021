@@ -1,0 +1,93 @@
+/* 
+<div class="title">
+        <h2>Title</h2>
+    </div>
+    <div class="accross-row"></div>
+    <div class="first-row"></div>
+    <div class="second-row"></div>
+
+    #05225c
+    #92278f
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%
+}
+h2 {
+    font-size: 50px;
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.accross-row {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: #3b4e74;
+    transition: 1s;
+}
+.accross-row:hover {
+    background-color: #92278f;
+    transition-duration: .5s;
+}
+.first-row {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+.pinkRect {
+    height: 240px;
+    width: 410px;
+    background-color: #92278f;
+    transition: 1s;
+}
+.pinkRect:hover {
+    height: 300px;
+    width: 430px;
+    background-color: #05225c;
+    transition: .5s;
+}
+.pinkRect:active {
+    background-color: aqua;
+    transition: .5s;
+}
+
+/* failed attempt */
+/* .pinkRect-active {
+    background-color: aqua;
+} */
+
+
+
+.animate-all {
+    animation-name: allAnim;
+    animation-duration: 5s;
+    /* ? */
+    animation-fill-mode: forwards;
+    /* transition: ease-in; */
+}
+.animate-all-deselect {
+    animation-name: allAnim;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+
+@keyframes allAnim {
+    /* from {color: transparent; background-color: transparent;} */
+    /* to { background-color: #ececec;} */
+    
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+

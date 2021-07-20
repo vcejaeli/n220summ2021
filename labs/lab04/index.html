@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Lab</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="everything" onfocus="textFocus()" onblur="textLeave()" class="animate-all">
+
+        <div class="title">
+            <h2>Title</h2>
+        </div>
+        <div class="accross-row"></div>
+        <div class="first-row" id="pinkClick">
+            <div class="pinkRect"></div>
+            <div class="pinkRect"></div>
+            <div class="pinkRect"></div>
+        </div>
+        <div class="first-row">
+            <div class="pinkRect"></div>
+            <div class="pinkRect"></div>
+            <div class="pinkRect"></div>
+        </div>
+
+    </div>
+    
+
+    
+    <script src="app.js"></script>
+    <!-- including GreenSock -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/CSSRulePlugin.min.js"></script>
+    <!-- why do I keep getting a console error that TweenMax is not defined? I'm confused... -->
+
+</body>
+</html>
+
+
+<!-- 
+    1) A build-in for all the elements (go from nothing on the screen, to everything visible)
+
+    2) A mouse over / highlight for each of the gallery elements below
+
+    3) A exit animation for when one gallery element is clicked
+
+    sorry for the mess, I would have preferred to use keyframes all the way but you know, noob problems
+ -->
