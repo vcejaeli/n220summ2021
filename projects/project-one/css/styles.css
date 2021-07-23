@@ -1,0 +1,45 @@
+* {
+    /* background-color: #c9c9c9; */
+    background-image: linear-gradient(to right, #b5b5b5, #a1a1a1);
+    font-family: 'Anton', sans-serif;
+}
+
+svg {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 110px;
+    cursor: pointer;
+    
+
+    /* box-shadow: 5px 6px #888; */
+    /* ask travis about border shadow for this */
+}
+
+
+.resetBtn {
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 3px solid #194cc9;
+    color: #194cc9;
+    border-radius: 22px;
+    outline: none;
+    font-size: 1.2rem;
+    transition: .5s;
+    background: none;
+    box-shadow: 5px 6px #888;
+}
+.resetBtn:hover {
+    border-radius: 1px;
+    width: 105px;
+    height: 35px;
+    font-size: 1.3rem;
+    color: #fff;
+    border: 3px solid #fff;
+    background: none;
+}

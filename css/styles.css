@@ -4,12 +4,25 @@
   box-sizing: border-box;
 }
 html, body {
-  height: 100%
+  height: 100%;
 }
 h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 16px
 }
 
 body {
-    background-image: linear-gradient(to right, rgba(158, 199, 121), rgb(120, 151, 90));
+    /* background-image: linear-gradient(to right, rgba(158, 199, 121), rgb(120, 151, 90)); */
+}
+/* oohh remember.. if it is css/styles.css = ../    |   if it is html img/imgfilename    you need practice boy*/
+img {
+  height: 100%;
+  width: 100%;
+  background-color: antiquewhite;
+  /* background-image: url("img/iupui-informatics.jpg"); */
+  
+  background-image: url(../img/iupui-informatics.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
