@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    /* padding: 20px; */
+}
+
+.move {
+    width: 66%;
+    margin-left: 15%;
+    margin-top: 13%;
+}
+.container {
+    background: #06c6c9;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 55px;
+}
+
+/* s a */
+.gameStatus {
+    display: flex;
+    margin-top: 5px;
+    font-size: 25px;
+    justify-content: space-around;
+}
+
+/* making the grid! */
+.game-grid {
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    /* telling it I want 3 rows with 3 squares */
+    grid-template-columns: 200px 200px 225px;
+    grid-template-rows: 250px 150px 250px;
+    grid-gap: 9px;
+    background-color: #049396;
+    border-radius: 15px;
+}
+
+.block {
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    color: white;
+    background-color: #048486;
+}
+
+button {
+    background-color: #06c6c9;
+    border-color: white;
+    color: black;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* CSS Animation */
+/* here we will edit our title to change colors */
+
+.welcome {
+    color: #06c6c9;
+    animation-name: welcomeText;
+    animation-duration: 8s;
+}
+
+@keyframes welcomeText {
+    from {color: #06c6c9;}
+    to {color: #ff42ff;}
+}
+
+/* svg boardgame */
+/* svg was a pain to resize.. */
+/* .boardimg {
+    width: 556px;
+    height: 556px;
+    display: block;
+    margin: auto;
+}   */
