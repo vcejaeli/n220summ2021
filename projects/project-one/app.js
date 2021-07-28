@@ -14,8 +14,7 @@ var y_moves = [];
 
 //how do we place down chips?       
 
-
-// 26 28
+// lines 26 28
 
 
 //room for error with 'blocked' @25 @28 @33
@@ -59,7 +58,7 @@ elems.forEach(
     }
 );
 
-//here we will check for the winner using a set of arrays with our id's from td
+//here we will check for the winner using a set of arrays with our id's from td and yes this system rocks. Shout out to my gf for the idea.
 function checkWin(player) {
     // var winner = false;
 
@@ -216,22 +215,6 @@ function checkWin(player) {
 }
 
 
-
-
-
-
-// alert("welcome to connect 4!");
-// while (!player) {
-//     var player1 = prompt('Player One: Enter your name. You will be red.');
-// };
-// var player1Color = 'red';
-
-// while (!player2) {
-//     var player2 = prompt('Player Two: Enter your name. You will be yellow.');
-// };
-// var player2Color = 'yellow';
-
-
 //here is where I tell js what players we have and how many chips each of them get.
 class Players {
     constructor(color, chipAmount) {
@@ -253,6 +236,7 @@ class r_moves extends Players {
 }
 
 
+//attempted code
 //player Class Inheritance    attempt lol
 // class Players {
 //     constructor(color, chipAmount) {
@@ -293,18 +277,13 @@ class r_moves extends Players {
 /* dumbed down version
 
     * tell code to drop color only in svg area  (and fix svg area :/    fixed!)
-    * create the chips themselves   --> how, properties, chip(svg?) -> xy properties
+    * create the chips themselves   --> how, properties, chip(svg?) -> xy properties 
     * set rules w/ player turn counter   --> 4 in a row wins in 4 directions --> 3 scenarios {yellow wins, red winds, no one won}  -> how to check what win is. 
     * alert to stop placing chips
     * set chip amounts (21 each) and chip colors (yellow, red)
-    
     take SVG size --> anything outside of it ignore
 
-
-
     code variations of program / checkWin function    (break it down)
-
-
 
     ||| need to specify more  |||
 
@@ -314,10 +293,21 @@ class r_moves extends Players {
     tried to make connect 4 made 50% didnt know how to do this: watched youtube video saw 
     how to make win condition and this is how it changed my approach and learned from it. 
     -----
-
     stare out into the clouds more! programming happens in your head.
 
-
-
     for example: create a check win function separately from project, if it works then import it!
+*/
+/*      thought process
+
+    need to make a board, with interactivity. Each circle needs its own cell and coordinates and id to connect and interact with. 
+    Idealy I need to keep my SVG image from illustrator in there. 
+    We will also need a title, and a reset button.
+
+    We need to make something that works along the following:
+    when hover svg yellow or svg red chip over top of board, find row and onclick drop to lowest non filled circle (ex: 61) then checkWin runs in background, 
+    if no win is found it is next color (r) turn, repeat process until draw and all spots filled, or until a win is found!
+
+    I would also need a whole separate function to represent and suddenly appear the chips that hover and the chips that are still in the board while the game goes on. 
+    During this the turntracker would be managing and working with the appropriate color whos turn it is.
+
 */
